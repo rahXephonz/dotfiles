@@ -1,14 +1,19 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   config = {
 
     home.packages = with pkgs; [
-      rnix-lsp nixfmt ripgrep
-      fd starship zig
-      stylua luajitPackages.lua-lsp
+      rnix-lsp
+      nixfmt
+      ripgrep
+      fd
+      starship
+      stylua
+      luajitPackages.lua-lsp
       nodePackages.typescript-language-server
       nodePackages.pyright
+      nodePackages.vscode-langservers-extracted
     ];
 
     home.file.".config/nvim/settings.lua".source = ./lua/settings.lua;
@@ -20,8 +25,7 @@
       withPython3 = true;
       withRuby = true;
       defaultEditor = true;
-
-      plugins = with pkgs.vimPlugins; [ 
+      plugins = with pkgs.vimPlugins; [
         vim-nix
         cmp-git
         cmp-path
@@ -32,77 +36,93 @@
         cmp-nvim-lsp
         kanagawa-nvim
         nvim-web-devicons
-        
+        neoformat
+        vim-floaterm
+        papercolor-theme
+        NeoSolarized
 
         {
           plugin = lualine-nvim;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/lualine.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lualine.lua
+          '';
+        }
+
+        {
+          plugin = neogit;
+          config = ''
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/neogit.lua
+          '';
+        }
+
+        {
+          plugin = lazy-lsp-nvim;
+          config = ''
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lazy.lua
           '';
         }
 
         {
           plugin = nvim-treesitter;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/treesitter.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/treesitter.lua
           '';
         }
 
         {
           plugin = nvim-cmp;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/cmp.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/cmp.lua
           '';
         }
 
         {
           plugin = lspkind-nvim;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/lspkind.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lspkind.lua
           '';
         }
 
         {
           plugin = telescope-nvim;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/telescope.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/telescope.lua
           '';
         }
 
         {
           plugin = indent-blankline-nvim;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/indent.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/indent.lua
           '';
-
         }
 
         {
           plugin = nvim-lspconfig;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/lsp.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lsp.lua
           '';
         }
 
         {
           plugin = nvim-tree-lua;
-          config = '' 
-            luafile ~/.config/dotfiles/home/nvim/lua/config/tree.lua
+          config = ''
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/tree.lua
           '';
         }
 
         {
           plugin = bufferline-nvim;
           config = ''
-            luafile ~/.config/dotfiles/home/nvim/lua/config/bufferline.lua
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/bufferline.lua
           '';
         }
       ];
 
       extraConfig = ''
-        luafile ~/.config/dotfiles/home/nvim/lua/settings.lua
+        luafile ~/.config/dotfiles/modules/users/nvim/lua/settings.lua
         luafile ~/.config/nvim/settings.lua
-        luafile ~/.config/dotfiles/home/nvim/lua/maps.lua
+        luafile ~/.config/dotfiles/modules/users/nvim/lua/maps.lua
       '';
 
     };
