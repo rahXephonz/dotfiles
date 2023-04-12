@@ -9,5 +9,7 @@
     ./tmux
     ./hyprland
     ./dunst
+    ./eww
+    ./wofi
   ];
 }

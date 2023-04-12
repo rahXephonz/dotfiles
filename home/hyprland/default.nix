@@ -12,6 +12,7 @@ with lib;
     slurp
     grim
     brightnessctl
+    alacritty
   ];
 
   wayland.windowManager.hyprland = {
