@@ -11,9 +11,16 @@ with lib;
     sway
     slurp
     grim
+    brightnessctl
   ];
 
-  wayland.windowManager.hyprland.enable = true;
-
-  home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland = {
+      enable = true;
+      hidpi = true;
+    };
+    nvidiaPatches = false;
+    extraConfig = builtins.readFile ./hyprland.conf;
+  };
 }

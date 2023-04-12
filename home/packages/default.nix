@@ -2,13 +2,11 @@
 
 {
   home.packages = with pkgs; [
-    zig
     fd
     jq
     git-crypt
     neofetch
     lazygit
-    python3
     ripgrep
     android-tools
     unzip
@@ -18,21 +16,11 @@
     lsd
     htop
     xorg.xbacklight
-    nodejs
-    tdesktop
     pavucontrol
     bat
     luajit
     vscode
     nitrogen
-    wofi
-    swaybg
-    wlsunset
-    wl-clipboard
-    sway
-    grim
-    dunst
-    brightnessctl
     pcmanfm
   ];
 }
