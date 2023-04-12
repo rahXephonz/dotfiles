@@ -3,18 +3,7 @@
 {
   config = {
 
-    home.packages = with pkgs; [
-      rnix-lsp
-      nixfmt
-      ripgrep
-      fd
-      starship
-      stylua
-      luajitPackages.lua-lsp
-      nodePackages.typescript-language-server
-      nodePackages.pyright
-      nodePackages.vscode-langservers-extracted
-    ];
+    home.packages = with pkgs; [ zig rnix-lsp nixfmt ripgrep fd starship ];
 
     home.file.".config/nvim/settings.lua".source = ./lua/settings.lua;
 
