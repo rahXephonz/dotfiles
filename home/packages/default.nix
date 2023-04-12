@@ -25,6 +25,14 @@
     luajit
     vscode
     nitrogen
-    figma-linux
+    wofi
+    swaybg
+    wlsunset
+    wl-clipboard
+    sway
+    grim
+    dunst
+    brightnessctl
+    pcmanfm
   ];
 }
