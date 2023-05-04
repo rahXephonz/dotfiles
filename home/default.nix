@@ -7,7 +7,6 @@
     ./packages
     ./direnv
     ./tmux
-    ./hyprland
     ./dunst
     ./eww
     ./wofi

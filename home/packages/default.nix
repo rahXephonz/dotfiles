@@ -12,8 +12,6 @@
     pavucontrol
     bat
     luajit
-    vscode
-    pcmanfm
-    google-chrome
+    slack
   ];
 }
