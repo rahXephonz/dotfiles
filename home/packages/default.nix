@@ -13,5 +13,8 @@
     bat
     luajit
     slack
+    nodejs
+    nodePackages.yarn
+    nodePackages.pnpm
   ];
 }
