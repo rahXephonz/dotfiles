@@ -2,11 +2,8 @@
 
 {
   config = {
-
     home.packages = with pkgs; [ zig rnix-lsp nixfmt ripgrep fd starship ];
-
     home.file.".config/nvim/settings.lua".source = ./lua/settings.lua;
-
     programs.neovim = {
       enable = true;
       vimdiffAlias = true;

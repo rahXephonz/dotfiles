@@ -3,9 +3,7 @@
 with lib;
 
 {
-	home.packages = with pkgs; [
-	    dunst
-	];
+  home.packages = with pkgs; [ dunst ];
 
   services.dunst = {
     enable = true;
@@ -22,7 +20,9 @@ with lib;
         idle_threshold = 120;
         font = "Hack Nerd Font Mono 12";
         line_height = 0;
-        format = "<b>%s</b>\n%b";
+        format = ''
+          <b>%s</b>
+          %b'';
         alignment = "center";
         icon_position = "off";
         startup_notification = "false";

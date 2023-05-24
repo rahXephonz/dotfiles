@@ -1,14 +1,9 @@
-{ inputs, lib, config, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 with lib;
 
 {
-  home.packages = with pkgs; [
-    eww-wayland
-    pamixer
-    brightnessctl
-    gdk-pixbuf
-  ];
+  home.packages = with pkgs; [ eww-wayland pamixer brightnessctl gdk-pixbuf ];
 
   home.file.".config/eww/eww.scss".source = ./eww.scss;
   home.file.".config/eww/eww.yuck".source = ./eww.yuck;

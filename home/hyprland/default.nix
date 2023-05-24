@@ -12,16 +12,15 @@ with lib;
     slurp
     grim
     brightnessctl
-    alacritty
   ];
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland = {
-      enable = true;
-      hidpi = true;
-    };
-    nvidiaPatches = false;
-    extraConfig = builtins.readFile ./hyprland.conf;
-  };
+  #wayland.windowManager.hyprland = {
+  #  enable = true;
+  #  xwayland = {
+  #    enable = true;
+  #    hidpi = true;
+  #  };
+  #  nvidiaPatches = false;
+  #  extraConfig = builtins.readFile ./hyprland.conf;
+  #};
 }

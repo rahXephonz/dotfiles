@@ -13,6 +13,7 @@
     bat
     luajit
     slack
+    postman
     nodejs
     nodePackages.yarn
     nodePackages.pnpm

@@ -5,7 +5,7 @@ if iwctl station wlp2s0 show | grep -q "connected"; then
     ssid=Unicorn
     status="Connected to ${ssid}"
 else
-    icon="睊"
+    icon=""
     status="offline"
 fi
 

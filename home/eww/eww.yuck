@@ -118,9 +118,8 @@
 
 (defwidget wifi []
  (box :vexpand false :hexpand false :orientation "v"
-   (label :text {wifi.icon}
+   (label 
           :limit-width 10
-          :tooltip {wifi.status}
           :class "wifi"
     )
   )
