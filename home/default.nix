@@ -8,8 +8,6 @@
     ./direnv
     ./tmux
     ./foot
-    ./hyprland
-    ./waybar
     ./dunst
     ./wofi
   ];

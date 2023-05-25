@@ -15,6 +15,7 @@
     slack
     postman
     nodejs
+    brightnessctl
     nodePackages.yarn
     nodePackages.pnpm
   ];
