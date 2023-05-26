@@ -17,6 +17,7 @@
           config = { allowUnfree = true; };
           system = "x86_64-linux";
         };
+        modules = [ ./home ];
       };
     };
   };

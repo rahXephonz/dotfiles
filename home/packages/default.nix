@@ -12,7 +12,6 @@
     pavucontrol
     bat
     luajit
-    slack
     postman
     nodejs
     brightnessctl
