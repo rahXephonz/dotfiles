@@ -6,6 +6,7 @@ require("lazy-lsp").setup({
 		"ccls",
 		"zk",
 		"denols",
+    "sqls",
 	},
 	default_config = {
 		flags = {

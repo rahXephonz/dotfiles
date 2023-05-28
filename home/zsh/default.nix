@@ -13,6 +13,7 @@
       export PATH=~/.npm-packages/bin:$PATH
       export PATH=~/.grader/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
+      export XKB_DEFAULT_OPTIONS=caps:escape
       source ~/.config/dotfiles/home/zsh/z.sh
       eval "$(starship init zsh)"
     '';

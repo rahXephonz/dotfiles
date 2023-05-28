@@ -7,7 +7,7 @@
     settings = {
       global = {
         origin = "top-left";
-        offset = "60x12";
+        offset = "60x30";
         separator_height = 2;
         padding = 12;
         horizontal_padding = 12;
@@ -27,7 +27,7 @@
         frame_color = "#44465c";
         background = "#303241";
         foreground = "#d9e0ee";
-        timeout = 2;
+        timeout = 3;
       };
     };
   };

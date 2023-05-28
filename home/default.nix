@@ -10,5 +10,6 @@
     ./foot
     ./dunst
     ./wofi
+    ./waybar
   ];
 }

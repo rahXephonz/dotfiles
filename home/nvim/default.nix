@@ -23,6 +23,7 @@
       nvim-web-devicons
       neoformat
       vim-floaterm
+      lspsaga-nvim
 
       {
         plugin = lualine-nvim;

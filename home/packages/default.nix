@@ -15,6 +15,11 @@
     postman
     nodejs
     brightnessctl
+    jq
+    slurp
+    wl-clipboard
+    grim
+    swaybg
     nodePackages.yarn
     nodePackages.pnpm
   ];
