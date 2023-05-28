@@ -11,5 +11,6 @@
     ./dunst
     ./wofi
     ./waybar
+    ./eww
   ];
 }
