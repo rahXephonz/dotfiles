@@ -3,6 +3,7 @@
     (box :valign "start" :hexpand false :vexpand true :orientation "v" :space-evenly false
       (launch)
       (dashbutton)
+      (screenshot)
       (powerbutton)
     )
 
@@ -31,22 +32,22 @@
 
       (box :class "slider_box" :orientation "v" :vexpand false :hexpand false
         (box :space-evenly false
-            (label :class "slider_icon" :text "")
+            (label :class "slider_icon" :text "")
             (scale :min 1 :max 101 :width 315 :class "brightness_slider" :value brightness :onchange "brightnessctl set {}%" :height 10)
         )
         (box :space-evenly false
-          (label :class "slider_icon" :text "墳")
+          (label :class "slider_icon" :text "")
           (scale :min 1 :max 101 :width 315 :class "volume_slider" :value volume :onchange "pamixer --set-volume $(echo {} | sed 's/[.].*$//')")
         )
         (box :space-evenly false
-          (label :class "slider_icon" :text "")
+          (label :class "slider_icon" :text "")
           (scale :min 1 :max 101 :width 315 :class "micvolume_slider" :value micvolume :onchange "pamixer --set-volume $(echo {} | sed 's/[.].*$//') --source 1")
         )
       )
       (box :class "sysinfo_box" :orientation "h" :vexpand true :spacing 15 
         (mem :thickness 12 :icon "")
-        (cpu :thickness 12 :icon "")
-        (disk :thickness 12 :icon "")
+        (cpu :thickness 12 :icon "")
+        (disk :thickness 12 :icon "")
       )
     )
     (box :class "notification_box"
@@ -66,11 +67,11 @@
 ;; ━━━ MEMORY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 (defwidget dashbutton[]
-  (button :class "reg-btn dashbutton" :onclick "eww open dashboard --toggle" "舘")
+  (button :class "reg-btn dashbutton" :onclick "eww open dashboard --toggle" "")
 )
 
 (defwidget screenshot[]
-  (button :class "reg-btn dashbutton" :onclick "grimshot --notify copy area" "")
+  (button :class "reg-btn screenshot" :onclick "grimblast --notify copy area && notify-send 'SkrinSut Berhasil Disimpan gan'" "")
 )
 
 ;; ━━━ MEMORY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -117,7 +118,7 @@
 (defpoll wifi :interval "30s" "./scripts/wifi.sh")
 
 (defwidget wifi []
- (box :vexpand false :hexpand false :orientation "v"
+ (box :vexpand false :hexpand false :orientation "h"
    (label :text {wifi.icon}
           :limit-width 10
           :tooltip {wifi.status}
@@ -255,7 +256,7 @@
     (button :class "btn"
             :tooltip "Suspend"
             :onclick "systemctl suspend"
-      "")
+      "")
     )
   )
 )
@@ -289,7 +290,7 @@
 (defwindow bar
   :monitor 0
   :exclusive false 
-  :geometry (geometry :height "1080px" :x "-4px" :y "0px"
+  :geometry (geometry :height "1080px" :x "-4px" :y "20px"
   :width "52px"
   :anchor "top left")
   :stacking "fg"

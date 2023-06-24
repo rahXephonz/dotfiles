@@ -4,7 +4,7 @@ function trim(s)
   return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end
 
-aw = io.popen("hyprctl monitors | grep active | sed 's/()/(1)/g' | sort | awk 'NR>1{print $1}' RS='(' FS=')'")
+aw = io.popen("hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id'")
 active_workspace = aw:read("*a")
 aw:close()
 

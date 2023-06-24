@@ -1,12 +1,12 @@
 #!/bin/sh
 
-if iwctl station wlp2s0 show | grep -q "connected"; then
+if iwctl station wlan0 show | grep -q connected; then
     icon=""
-    ssid=Unicorn
+    ssid=$(nmcli -t -f name,device connection show --active | grep wlan0 | cut -d\: -f1)
     status="Connected to ${ssid}"
 else
-    icon="睊"
+    icon=""
     status="offline"
 fi
 
-echo "{\"icon\": \"${icon}\", \"status\": \"${status}\"}" 
+echo $(jq -n "{\"icon\": \"${icon}\", \"status\": \"${status}\"}")
