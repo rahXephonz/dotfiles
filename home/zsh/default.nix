@@ -14,6 +14,9 @@
       export PATH=~/.grader/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
       export XKB_DEFAULT_OPTIONS=caps:escape
+      export PATH="$HOME/.local/bin:$PATH"
+      export FLYCTL_INSTALL="/home/ms/.fly"
+      export PATH="$FLYCTL_INSTALL/bin:$PATH"
       source ~/.config/dotfiles/home/zsh/z.sh
       eval "$(starship init zsh)"
     '';
