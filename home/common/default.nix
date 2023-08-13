@@ -1,6 +1,6 @@
 {
   home.stateVersion = "23.05";
-  home.username = "ms";
-  home.homeDirectory = "/home/ms";
+  home.username = "maulanasodiqin";
+  home.homeDirectory = "/Users/maulanasodiqin";
   programs.home-manager.enable = true;
 }

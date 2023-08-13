@@ -7,10 +7,10 @@
     ./packages
     ./direnv
     ./tmux
-    ./foot
-    ./dunst
-    ./wofi
-    ./waybar
-    ./eww
+    #./foot
+    #./dunst
+    #./wofi
+    #./waybar
+    #./eww
   ];
 }

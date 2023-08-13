@@ -9,17 +9,12 @@
     unrar
     lsd
     htop
-    pavucontrol
     bat
     luajit
-    postman
     nodejs
-    brightnessctl
     jq
-    slurp
-    wl-clipboard
-    grim
-    swaybg
+    postman
+    discord
     nodePackages.yarn
     nodePackages.pnpm
   ];

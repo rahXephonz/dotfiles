@@ -10,12 +10,12 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }: {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+    defaultPackage.aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
     homeConfigurations = {
-      ms = home-manager.lib.homeManagerConfiguration {
+      maulanasodiqin = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           config = { allowUnfree = true; };
-          system = "x86_64-linux";
+          system = "aarch64-darwin";
         };
         modules = [ ./home ];
       };
