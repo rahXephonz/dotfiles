@@ -23,12 +23,18 @@
       nvim-web-devicons
       neoformat
       vim-floaterm
-      lspsaga-nvim
 
       {
         plugin = lualine-nvim;
         config = ''
           luafile ~/.config/dotfiles/home/nvim/lua/config/lualine.lua
+        '';
+      }
+
+      {
+        plugin = lspsaga-nvim;
+        config = ''
+          luafile ~/.config/dotfiles/home/nvim/lua/config/lspsaga.lua
         '';
       }
 
@@ -105,7 +111,6 @@
 
     extraConfig = ''
       luafile ~/.config/dotfiles/home/nvim/lua/settings.lua
-      luafile ~/.config/nvim/settings.lua
       luafile ~/.config/dotfiles/home/nvim/lua/maps.lua
     '';
 

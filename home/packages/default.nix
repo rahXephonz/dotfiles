@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    docker
     neofetch
     android-tools
     unzip
@@ -15,6 +16,9 @@
     jq
     postman
     discord
+    slack
+    iterm2
+    flameshot
     nodePackages.yarn
     nodePackages.pnpm
   ];
