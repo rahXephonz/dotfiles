@@ -1,5 +1,5 @@
 require('lspsaga').setup({
-  ui = {
+  lightbulb = {
     enable = false
-  }
+  },
 })

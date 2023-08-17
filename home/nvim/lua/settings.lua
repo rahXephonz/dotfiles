@@ -6,7 +6,6 @@ vim.cmd("colorscheme kanagawa")
 vim.cmd("set background=dark")
 vim.cmd("au InsertEnter * set nornu")
 vim.cmd("au InsertLeave * set rnu")
-vim.cmd("autocmd BufWritePre * Neoformat")
 
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal and beam cursor in insert mode
 o.wrap = true

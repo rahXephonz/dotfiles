@@ -59,7 +59,7 @@ end
           behavior = cmp.ConfirmBehavior.Replace,
           select = false
       },
-      ["<Tab>"] = cmp.mapping(function(fallback)
+      ["J"] = cmp.mapping(function(fallback)
           if cmp.visible() then
               cmp.select_next_item()
           elseif vim.fn["vsnip#available"](1) == 1 then
@@ -67,10 +67,10 @@ end
           elseif has_words_before() then
               cmp.complete()
           else
-              fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+              fallback()
           end
       end, {"i", "s"}),
-      ["<S-Tab>"] = cmp.mapping(function()
+      ["K"] = cmp.mapping(function()
           if cmp.visible() then
               cmp.select_prev_item()
           elseif vim.fn["vsnip#jumpable"](-1) == 1 then
@@ -81,6 +81,7 @@ end
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
+      { name = 'codeium' },
     }, 
     {
       { name = 'buffer' },
