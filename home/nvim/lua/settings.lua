@@ -7,6 +7,18 @@ vim.cmd("set background=dark")
 vim.cmd("au InsertEnter * set nornu")
 vim.cmd("au InsertLeave * set rnu")
 
+vim.cmd([[
+  augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+  augroup END
+]])
+
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+]])
+
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal and beam cursor in insert mode
 o.wrap = true
 o.updatetime = 300 -- faster completion

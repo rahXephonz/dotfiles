@@ -19,6 +19,7 @@
     slack
     iterm2
     flameshot
+    prettierd
     nodePackages.yarn
     nodePackages.pnpm
   ];

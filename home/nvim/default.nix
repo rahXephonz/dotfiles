@@ -13,7 +13,6 @@
   programs.neovim.plugins = with pkgs.vimPlugins; [
     vim-nix
     vim-fugitive
-    vim-prettier
     cmp-git
     cmp-path
     cmp-vsnip
@@ -25,6 +24,10 @@
     nvim-web-devicons
     blamer-nvim
     codeium-vim
+    neoformat
+    NeoSolarized
+    colorbuddy-nvim
+    tokyonight-nvim
 
     {
       plugin = lualine-nvim;
