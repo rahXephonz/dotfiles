@@ -12,7 +12,7 @@
   outputs = { nixpkgs, home-manager, ... }: {
     defaultPackage.aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
     homeConfigurations = {
-      maulanasodiqin = home-manager.lib.homeManagerConfiguration {
+      rizkyy = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           config = { allowUnfree = true; };
           system = "aarch64-darwin";
