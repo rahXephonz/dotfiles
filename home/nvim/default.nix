@@ -28,12 +28,20 @@
     NeoSolarized
     colorbuddy-nvim
     tokyonight-nvim
+    gruvbox-nvim
 
     {
       plugin = lualine-nvim;
       config = ''
         luafile ~/.config/dotfiles/home/nvim/lua/config/lualine.lua
       '';
+    }
+
+    {
+      plugin = presence-nvim;
+      config = ''
+        luafile ~/.config/dotfiles/home/nvim/lua/config/presence.lua
+      ''; 
     }
 
     {
