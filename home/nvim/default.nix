@@ -38,10 +38,17 @@
     }
 
     {
+      plugin = gitsigns-nvim;
+      config = ''
+        luafile ~/.config/dotfiles/home/nvim/lua/config/gitsign.lua
+      '';
+    }
+
+    {
       plugin = presence-nvim;
       config = ''
         luafile ~/.config/dotfiles/home/nvim/lua/config/presence.lua
-      ''; 
+      '';
     }
 
     {
