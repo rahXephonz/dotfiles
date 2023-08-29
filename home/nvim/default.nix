@@ -12,6 +12,7 @@
   programs.neovim.defaultEditor = true;
   programs.neovim.plugins = with pkgs.vimPlugins; [
     vim-nix
+    vim-wakatime
     vim-fugitive
     cmp-git
     cmp-path
@@ -55,6 +56,13 @@
       plugin = null-ls-nvim;
       config = ''
         luafile ~/.config/dotfiles/home/nvim/lua/config/prettier.lua
+      '';
+    }
+
+    {
+      plugin = todo-comments-nvim;
+      config = ''
+        luafile ~/.config/dotfiles/home/nvim/lua/config/todo-comments.lua
       '';
     }
 
