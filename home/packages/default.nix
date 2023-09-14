@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     docker
     neofetch
+    bun
     android-tools
     unzip
     wget
