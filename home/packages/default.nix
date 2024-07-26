@@ -4,15 +4,18 @@
   home.packages = with pkgs; [
     docker
     neofetch
-    bun
+    gh
     android-tools
     unzip
     wget
     unrar
     lsd
+    go
     htop
     bat
+    vscodium
     luajit
+    websocat
     nodejs
     jq
     postman
